@@ -205,7 +205,7 @@ const IpdAdmission = () => {
             <input type="text" className="border-b border-black mx-8  " />
             <p className="font-thin text-black mx-1">Wt.</p>
             <input type="text" className="border border-black w-24 mx-16" />
-          </div>{" "}
+          </div>
           <div className="w-30 h-7 mx-2 ">
             <Select label="" className="h-7">
               <Option>Material Tailwind HTML</Option>
@@ -276,6 +276,176 @@ const IpdAdmission = () => {
             />
           </div>
         </Card>
+      </div>
+      <div className="w-9/12 border border-black mx-2">
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Ward Name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Bed Name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Status
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  patient Name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Registration
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  MRNo
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Registration Date
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Cashless
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Corparate Name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Consultant Name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Sex
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Fathers Name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Mobile No.
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Service No.
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Bed Charge
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Provisional Diagnosis
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  ward ID
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  DOB
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Service No.1
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  BillCardId
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  collection Center Id{" "}
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Advance{" "}
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  CorprateGroupID
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Department ID
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Ayushman
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td className="w-4 p-4"></td>
+                <th
+                  scope="row"
+                  className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  <div className="pl-3">
+                    <div className="text-base font-semibold"> </div>
+                    <div className="font-normal text-gray-500"> </div>
+                  </div>
+                </th>
+                <td className="px-6 py-4"></td>
+                <td className="px-6 py-4">
+                  <div className="flex items-center">
+                    <div className="h-2.5 w-2.5 rounded-full   mr-2"></div>
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <a
+                    href="#"
+                    type="button"
+                    data-modal-target="editUserModal"
+                    data-modal-show="editUserModal"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    {" "}
+                  </a>
+                </td>
+              </tr>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td className="w-4 p-4"></td>
+                <th
+                  scope="row"
+                  className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  <div className="pl-3">
+                    <div className="text-base font-semibold"> </div>
+                    <div className="font-normal text-gray-500"> </div>
+                  </div>
+                </th>
+                <td className="px-6 py-4"> </td>
+                <td className="px-6 py-4">
+                  <div className="flex items-center">
+                    <div className="h-2.5 w-2.5 rounded-full   mr-2"></div>{" "}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <a
+                    href="#"
+                    type="button"
+                    data-modal-show="editUserModal"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  ></a>
+                </td>
+              </tr>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td className="w-4 p-4"></td>
+                <th
+                  scope="row"
+                  className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  <div className="pl-3" />
+                  <div className="text-base font-semibold"> </div>
+                  <div className="font-normal text-gray-500"></div>
+                </th>
+                <td className="px-6 py-4"> </td>
+                <td className="px-6 py-4">
+                  <div className="flex items-center">
+                    <div className="h-2.5 w-2.5 rounded-full mr-2"></div>{" "}
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <a
+                    href="#"
+                    type="button"
+                    data-modal-show="editUserModal"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div className="px-2 ">
+        <p className="mx-2 "></p>
       </div>
     </div>
   );

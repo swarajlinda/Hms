@@ -13,9 +13,12 @@ import TodaysAdmission from "./components/TodaysAdmission";
 import ProcedureUsagesSummary from "./components/ProcedureUsagesSummary";
 import BedMapping from "./components/BedMapping";
 import PatUnderCare from "./components/PatUnderCare";
-
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import IpdAdmission from "./components/IpdAdmission";
+import Opdconsult from "./components/Opdconsult";
+import PatientInvestigation from "./components/PatientInvestigation";
+import Form from "./components/Form";
+
 // import Newsidebar from './components/newsidebar';
 // import Home from "./pages/Home"
 function App() {
@@ -35,6 +38,9 @@ function App() {
         <Route path="bedmapping" element={<BedMapping />} />
         <Route path="patundercare" element={<PatUnderCare />} />
         <Route path="IpdAdmission" element={<IpdAdmission />} />
+        <Route path="opdconsult" element={<Opdconsult />} />
+        <Route path="patinvest" element={<PatientInvestigation />} />
+        <Route path="form" element={<Form />} />
       </Routes>
     </div>
   );
