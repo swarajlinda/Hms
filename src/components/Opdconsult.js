@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "../App.css";
 import {
   Button,
   Tabs,
@@ -10,24 +11,13 @@ import {
   Option,
 } from "@material-tailwind/react";
 
-const data = [
-  {
-    label: "Calculation",
-    value: "html",
-  },
-  {
-    label: "Summary",
-    value: "react",
-    desc: ``,
-  },
-  {
-    label: "prevRecords",
-    value: "vue",
-    desc: ``,
-  },
-];
-
 const Opdconsult = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
   return (
     <div>
       <div className="col-start-1 col-end-7 pt-4 bg-green-900   font-bold text-end text-3xl pr-14 py-4 underline">
@@ -69,23 +59,121 @@ const Opdconsult = () => {
         </div>
 
         <div className="col-span-6 row-span-2">
-          <div className="w-1/2 my-4  ">
-            <Tabs value="html">
-              <TabsHeader>
-                {data.map(({ label, value }) => (
-                  <Tab key={value} value={value}>
-                    {label}
-                  </Tab>
-                ))}
-              </TabsHeader>
-              <TabsBody>
-                {data.map(({ value, desc }) => (
-                  <TabPanel key={value} value={value}>
-                    {desc}
-                  </TabPanel>
-                ))}
-              </TabsBody>
-            </Tabs>
+          <div className="tabs-container">
+            <div className="tabs">
+              <div
+                className={`tab ${activeTab === 0 ? "active" : ""}`}
+                onClick={() => handleTabClick(0)}
+              >
+                Calculations
+              </div>
+              <div
+                className={`tab ${activeTab === 1 ? "active" : ""}`}
+                onClick={() => handleTabClick(1)}
+              >
+                Summary
+              </div>
+              <div
+                className={`tab ${activeTab === 2 ? "active" : ""}`}
+                onClick={() => handleTabClick(2)}
+              >
+                PrevRecords
+              </div>
+            </div>
+            <div className="tab-content">
+              {activeTab === 0 && (
+                <div>
+                  <p className="font-bold">Calculations</p>
+                </div>
+              )}
+              {activeTab === 1 && (
+                <div>
+                  <div className="justify-items-start flex  ">
+                    <Button className="bg-blue-gray-400 mx-8 text-black hover:bg-gray-400 h-7 flex items-center">
+                      RefreshDetails
+                    </Button>
+
+                    <p className="">RegistrationNo. </p>
+                    <input
+                      type="text"
+                      className="  border border-black mx-2 w-24  h-7 "
+                    />
+                    <p className="">Registration Date </p>
+                    <input
+                      type="text"
+                      className="  border-black mx-2   w-24 h-7"
+                    />
+                  </div>
+                  <div className="flex justify-center my-2">
+                    <p>patientName</p>
+                    <input type="text" className="mx-2 w-1/2 " />
+                    <p>Telephone</p>
+                    <input type="text" />
+                  </div>
+                  <div className="flex justify-center my-2 ">
+                    <p>patientAddress</p>
+                    <input type="text" className="mx-4 w-1/2" />
+                    <p>City</p>
+                    <input type="text" />
+                  </div>
+                  <div className=" flex justify-center ml-12">
+                    <p className=" ">Investigations Bills </p>
+                  </div>
+                  <div className="flex">
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="10"
+                      className="mx-2"
+                    ></textarea>
+                    <textarea
+                      name=""
+                      id=""
+                      cols="45"
+                      rows="10"
+                      className="mx-8"
+                    ></textarea>
+                  </div>
+                  <div className=" flex justify-evenly">
+                    <div className="flex-grow  ">
+                      <p className="mx-2">Bill Details </p>
+                    </div>
+                    <div className="flex-grow">
+                      <p>Investigations Reports </p>
+                    </div>
+                  </div>
+                  <div className="flex  ">
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="10"
+                      className="mx-2"
+                    ></textarea>
+                    <textarea
+                      name=""
+                      id=""
+                      cols="45"
+                      rows="10"
+                      className="mx-8"
+                    ></textarea>
+                  </div>
+                </div>
+              )}
+              {activeTab === 2 && (
+                <div>
+                  <h2>Prev. Records</h2>
+                  <p>
+                    Proin dignissim eget arcu non lobortis. Ut lobortis, velit
+                    non pharetra malesuada, felis lorem tristique justo, ac
+                    pharetra sapien nibh at arcu. Duis sed blandit odio. Donec
+                    fringilla aliquet lectus ac venenatis. Integer suscipit
+                    fermentum neque a vestibulum.{" "}
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
           <div className="flex flex-row ">
             <p className="my-2 font-bold text-black underline ">Prescription</p>

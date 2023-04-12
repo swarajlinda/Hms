@@ -18,6 +18,10 @@ import IpdAdmission from "./components/IpdAdmission";
 import Opdconsult from "./components/Opdconsult";
 import PatientInvestigation from "./components/PatientInvestigation";
 import Form from "./components/Form";
+import Tabbedpattern from "./components/Tabbedpattern";
+import Dataentrypattern from "./components/Dataentrypattern";
+import Datagridpattern from "./components/Datagridpattern";
+import Treegirdoverview from "./components/Treegirdoverview";
 
 // import Newsidebar from './components/newsidebar';
 // import Home from "./pages/Home"
@@ -41,6 +45,10 @@ function App() {
         <Route path="opdconsult" element={<Opdconsult />} />
         <Route path="patinvest" element={<PatientInvestigation />} />
         <Route path="form" element={<Form />} />
+        <Route path="tab" element={<Tabbedpattern />} />
+        <Route path="dataentry" element={<Dataentrypattern />} />
+        <Route path="datagrid" element={<Datagridpattern />} />
+        <Route path="treegrid" element={<Treegirdoverview />} />
       </Routes>
     </div>
   );

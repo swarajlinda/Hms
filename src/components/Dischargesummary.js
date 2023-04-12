@@ -1,14 +1,13 @@
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Checkbox,
-} from "@material-tailwind/react";
+import React, { useState } from "react";
+import "../App.css";
+import { Card, Checkbox } from "@material-tailwind/react";
 
 const Dischargesummary = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
   return (
     <div>
       <div className="col-start-1 col-end-7 pt-6 bg-green-900 font-bold text-end text-3xl pr-14 py-4 ">
@@ -324,6 +323,72 @@ const Dischargesummary = () => {
         </div>
 
         <div className="col-span-6  border w-full ">
+          <div className="tabs-container">
+            <div className="tabs">
+              <div
+                className={`tab ${activeTab === 0 ? "active" : ""}`}
+                onClick={() => handleTabClick(0)}
+              >
+                Tab 1
+              </div>
+              <div
+                className={`tab ${activeTab === 1 ? "active" : ""}`}
+                onClick={() => handleTabClick(1)}
+              >
+                Tab 2
+              </div>
+              <div
+                className={`tab ${activeTab === 2 ? "active" : ""}`}
+                onClick={() => handleTabClick(2)}
+              >
+                Tab 3
+              </div>
+            </div>
+            <div className="tab-content">
+              {activeTab === 0 && (
+                <div>
+                  <h2>Tab 1 Content</h2>
+
+                  <div className="border border-black bg-deep-orange-900 h-96 ">
+                    <p className="font-bold text-black">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis eligendi quo pariatur recusandae! Ea ratione eaque
+                      ducimus sint dolorem nesciunt quis deserunt, sequi saepe
+                      dolore et, unde vitae veniam? Rerum vitae atque, nihil
+                      nostrum magnam maiores et. Similique sequi aut quam beatae
+                      aliquid. Quod repellat debitis sit. Facere harum possimus
+                      inventore sint fuga minus similique quaerat natus nobis,
+                      distinctio amet doloribus exercitationem rem ipsa cum?
+                    </p>
+                  </div>
+                </div>
+              )}
+              {activeTab === 1 && (
+                <div>
+                  <h2>Tab 2 Content</h2>
+                  <p>
+                    Integer vestibulum sem eget nisi vestibulum, in efficitur
+                    odio pulvinar. Maecenas in fermentum dolor. Ut pulvinar erat
+                    odio, vitae rutrum velit bibendum vitae. Etiam molestie
+                    tellus eu eros faucibus, sed interdum lacus fermentum.
+                    Aliquam quis ipsum eget urna dictum efficitur.{" "}
+                  </p>
+                </div>
+              )}
+              {activeTab === 2 && (
+                <div>
+                  <h2>Tab 3 Content</h2>
+                  <p>
+                    Proin dignissim eget arcu non lobortis. Ut lobortis, velit
+                    non pharetra malesuada, felis lorem tristique justo, ac
+                    pharetra sapien nibh at arcu. Duis sed blandit odio. Donec
+                    fringilla aliquet lectus ac venenatis. Integer suscipit
+                    fermentum neque a vestibulum.{" "}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
           <Card className="mx-2 my-2  border border-black ">
             <div className=" bg-orange-200  p-5 mx-15 py-2 border">
               <p className="float-left font-bold underline">
@@ -347,7 +412,7 @@ const Dischargesummary = () => {
             </div>
           </Card>
           <br />
-          <Card className="mx-2 border border-black ">
+          <Card className="mx-2 border border-solid border-gray-100">
             <div className="bg-orange-200 p-5 mx-15 py-2 border">
               <p className="float-left font-bold underline">
                 Signature of Treatment Consultant{" "}
